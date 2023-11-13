@@ -1,0 +1,407 @@
+/* Start Global Variables  */
+:root {
+  --dark: #000000;
+  --alt-dark: #2e2e30;
+  --light: #f5f5f7;
+  --titanium: #beb8ae;
+  --highlightsSectionColor: #101010;
+  --natural-titanium:#8f8a81;
+  --blue-titanium:#1a202a;
+  --white-titanium:#c9c8c3;
+  --black-titanium:#1e1f20;
+}
+
+/* End Global Variables  */
+
+
+/* Start Global Rules  */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'San Francisco light';
+  src: url('./assets/fonts/SF-Pro-Text-Light.otf');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('./assets/fonts/SF-Pro-Text-Regular.otf');
+  font-display: swap;
+  font-style: normal;
+}
+
+
+
+body {
+  font-family: 'San Francisco', sans-serif;
+  overflow-x: hidden;
+}
+
+
+section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--alt-dark);
+  border-radius: 10px;
+ 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* End Global Rules  */
+
+
+/* Start Intro Component Styling  */
+.intro {
+  background-color: var(--dark);
+}
+
+.intro .text {
+  text-align: center;
+  color: var(--titanium);
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+.intro .text h2 {
+  font-size: 60px;
+}
+
+.intro .text h3 {
+  margin-top: 5px;
+  font-size: 28px;
+}
+
+
+.intro .image {
+  background-color: var(--dark);
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/images/iphone-intro-image.jpg');
+  background-size: 3008px 624px;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+}
+
+
+
+@media only screen and (max-width: 743px) {
+
+  .intro .text h2 {
+    font-size: 48px;
+  }
+
+  .intro .image {
+    background-image: url('./assets/images/iphone-intro-image-small.jpg');
+    background-size: 734px 548px;
+    background-position: bottom;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .intro .image {
+    background-image: url('./assets/images/iphone-intro-image-medium.jpg');
+    background-size: 1068px 694px;
+  }
+
+}
+
+/* End Intro Component Styling  */
+
+
+/* Start Highlights Components Styling  */
+.highlights {
+  background-color: var(--highlightsSectionColor);
+  height: fit-content;
+  padding: 60px;
+}
+
+.highlights .header {
+  padding: 30px;
+  font-size: 40px;
+  color: #86868b;
+  text-align: center;
+}
+
+.highlights .content {
+  height: calc(100% - 116px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.highlights .video-wrapper {
+  width: fit-content;
+  position: relative;
+  margin: 10px;
+}
+
+.highlights .video-wrapper .text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--light);
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.highlights .video-wrapper video {
+  border-radius: 20px;
+  max-width: 90%;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 743px) {
+
+  .highlights .header {
+    font-size: 18px;
+  }
+
+  .highlights .video-wrapper .text {
+    font-size: 15px;
+  }
+}
+
+/* End Highlights Components Styling  */
+
+
+/* Start Explore Components Styling  */
+.explore {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 60px;
+  overflow: hidden;
+}
+
+.explore .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.explore .content .text {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.explore img {
+  max-width: 100%;
+}
+
+
+.explore.alt-view .header h3 {
+  font-size: 50px;
+}
+
+.explore.alt-view .content .text {
+  font-size: 21px;
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(134, 134, 139);
+}
+
+
+
+@media only screen and (max-width: 743px) {
+
+  .explore .content .text {
+    font-size: 25px;
+  }
+
+  .explore.alt-view .content .text {
+    text-align: left;
+
+  }
+
+  .explore.alt-view .header h3 {
+    font-size: 30px;
+  }
+}
+
+/* End Explore Components Styling  */
+
+
+/* Start Separator section Styling */
+.separator .img-wrapper .text {
+  position: absolute;
+  color: var(--light);
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.separator .img-wrapper .image {
+  background-image: url('./assets/images/separator-large.jpg');
+  background-size: cover;
+  background-position: 50%;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 743px) {
+
+
+  .separator .img-wrapper .text {
+    font-size: 30px;
+  }
+
+  .separator .img-wrapper .image {
+    background-image: url('./assets/images/separator-medium.jpg');
+  }
+}
+
+/* End Separator section Styling */
+
+
+/* Start iphone model Styling  */
+#iphone-model {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* End iphone model Styling  */
+
+
+/* Start Closer Look Styling #2e2e30 */
+.closer-look {
+  background-color: var(--highlightsSectionColor);
+  color: #86868b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 60px;
+  position: relative;
+  z-index: 1000;
+  user-select: none;
+}
+
+#closer-look-model {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  text-align: center;
+  cursor: grab;
+}
+
+.closer-look .text{
+  padding: 50px;
+}
+
+.closer-look .text h4 {
+  font-size: 60px;
+}
+
+.closer-look .colors-wrapper {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.closer-look .colors {
+  display: flex;
+  gap: 5px;
+  background-color: var(--alt-dark);
+  padding: 7px;
+  width: fit-content;
+  border-radius: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+.closer-look .colors > span {
+  cursor: pointer;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.colors span.natural {
+  background-color: var(--natural-titanium);
+}
+
+.colors span.white {
+  background-color: var(--white-titanium);
+}
+
+.colors span.blue {
+  background-color: var(--blue-titanium);
+}
+
+.colors span.black {
+  background-color: var(--black-titanium);
+}
+
+
+@media only screen and (max-width: 743px) {
+  
+  .closer-look .text h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+}
+/* End Closer Look Styling  */
